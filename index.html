@@ -16,14 +16,14 @@
 
         <nav>
             <ul>
-                <li><a href="#section1" class="nav-link" class="Button">Inicio</a></li>
-                <li><a href="#section2" class="nav-link" class="Button">Quienes Somos</a></li>
-                <li><a href="#section3" class="nav-link" class="Button">Servicios</a></li>
-                <li><a href="#section4" class="nav-link" class="Button">Contacto</a></li>
+                <li><a href="#section1" class="nav-link Button">Inicio</a></li>
+                <li><a href="#section2" class="nav-link Button">Quienes Somos</a></li>
+                <li><a href="#section3" class="nav-link Button">Servicios</a></li>
+                <li><a href="#section4" class="nav-link Button">Contacto</a></li>
             </ul>
         </nav>
     </header>
-S
+
     <main>
         <section id="section1" class="section1">
             <div><h2 class="section1a">Más de 15 años de experiencia</h2></div>
@@ -53,19 +53,19 @@ S
             <!-- AGREGAR FOTO -->
             <h4>Lic. Betipeda Leonardo Ezequiel</h4>
             <h5>Lic. en Kinesiología y Fisiatría</h5>
-            <p> Ver si agrego descripción de ellos </p>
+            
             <!-- AGREGAR FOTO -->
             <h4>Lic. Vega Mauro</h4>
             <h5>Lic. en Kinesiología y Fisiatría</h5>
-            <p> Ver si agrego descripción de ellos </p>
+            
             <!-- AGREGAR FOTO -->
             <h4>Prof. Bordi Milagros</h4>
             <h5>Profesora en Educación Físisca</h5>
-            <p> Ver si agrego descripción de ellos </p>
+            
             <!-- AGREGAR FOTO -->
             <h4>Prof. Coronel Gastón</h4>
             <h5>Profesor en Educación Física</h5>
-            <p> Ver si agrego descripción de ellos </p>
+            
         </section>
 
         <section id="section3"class="section3">
@@ -87,16 +87,37 @@ S
                 <h3>Rehabilitación Neurológica</h3>
 <p>Programa diseñado para mejorar la calidad de vida de personas que han sufrido lesiones o enfermedades del sistema nervioso, como accidentes cerebrovasculares o esclerosis múltiple. Incluye ejercicios que favorecen la movilidad y la coordinación.</p>
 
-                <h3>Rehabilitación Neurológica</h3>
+                <h3>Drenaje Linfático</h3>
 <p>Terapia que utiliza botas especiales para estimular el sistema linfático, favoreciendo la eliminación de líquidos y toxinas. Ideal para reducir la inflamación, mejorar la circulación y aliviar problemas como el linfedema.</p>    
 
             <h2>Coberturas</h2>
     <h3>Amplias coberturas en obras sociales y prepagas </h3>
 
-            <p>Galería de fotos</p>
-            <!-- GALERÍA DE FOTOS -->
+            
         </section>
-
+        <!-- GALERÍA DE FOTOS -->
+        <section class="galeria-de-fotos-"> 
+            <h3>Galería de fotos</h3>
+            <div class="galeria-container">
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <div class="slides">
+                <img src="img/fotogaleria1.jpeg" alt="fotogaleria1">
+                <img src="img/fotogaleria2.jpeg" alt="fotogaleria2">
+                <img src="img/fotogaleria3.jpeg" alt="fotogaleria3">
+                <img src="img/fotogaleria4.jpeg" alt="fotogaleria4">
+                <img src="img/fotogaleria5.jpeg" alt="fotogaleria5">
+                <img src="img/fotogaleria6.jpeg" alt="fotogaleria6">
+                <img src="img/fotogaleria7.jpg" alt="fotogaleria7">
+                <img src="img/fotogaleria8.jpeg" alt="fotogaleria8">
+                <img src="img/fotogaleria9.jpg" alt="fotogaleria9">
+                <img src="img/fotogaleria10.jpeg" alt="fotogaleria10">
+                
+            </div>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+        <script src="script.js"></script>
+        </section>
+        
         <section id="section4"class="section4"></section>
             <h2>Contáctanos</h2>
             <p>Para consultas, comunícate con nosotros directamente por WhatsApp:</p>
@@ -110,8 +131,33 @@ S
     </main>
 
     <footer class="footer-general">
-        <p class="footer-text">2024. Consultorio de Rehabilitación Funcional. Todos los derechos reservados. Este sitio web y su contenido, incluidos textos, gráficos, imágenes y otros materiales, están protegidos por derechos de autor y son propiedad exclusiva de CRF. Está prohibida la reproducción total o parcial sin autorización previa.</p>
+        <p class="footer-text">2024. Consultorio de Rehabilitación Funcional. Todos los derechos reservados. Este sitio web y su contenido están protegidos por derechos de autor y son propiedad exclusiva de CRF. Está prohibida la reproducción total o parcial sin autorización previa.</p>
+        <p class="footer-social-text">Seguinos en las redes</p>
+        
+        <section class="footer-redes">
+            <article class="redeslogo">
+                <a href="#">
+                    <img src="img/logocorreo.png" alt="Correo">
+                </a>
+                <p>Correo</p>
+            </article>
+    
+            <article class="redeslogo">
+                <a href="#">
+                    <img src="img/logoinstagram.png" alt="Instagram">
+                </a>
+                <p>Crfvillaramallo</p>
+            </article>
+    
+            <article class="redeslogo">
+                <a href="#">
+                    <img src="img/logofacebook.png" alt="Facebook">
+                </a>
+                <p>Facebook</p>
+            </article>
+        </section>
     </footer>
+    
 
 </body>
 
