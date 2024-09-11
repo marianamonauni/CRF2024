@@ -1,18 +1,20 @@
-/* Estilos Generales */
-@media only screen and (max-width: 768px) {
-}
 
-body.body-general {
-    font-family: 'Lato', sans-serif;
+/* Estilos Generales Body */
+.body-general {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
-    padding: 10px;
-    background-color: #e5e5e5d6; 
+    padding: 0;
+    background-color: #e5e5e5d6;
+    margin: 0 auto; 
+    max-width: 80%;
+    
 }
 
+/* Estilos Generales Header*/
 .header-general {
     background-color: #004080;
     color: white;
-    padding: 10px;
+    padding: 10px 0;
     text-align: center;
 }
 
@@ -26,11 +28,14 @@ body.body-general {
     font-size: 20px;
 }
 
+/* Estilos para el nav*/
 nav ul {
-    list-style-type: none;
-    padding: 0;
+    list-style-type: none;/*saca el adorno de la lista*/
+    padding: 1px;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 nav ul li {
@@ -49,46 +54,68 @@ nav ul li {
     text-decoration: none;
     font-size: 14px;
 }
-
 .nav-link:hover {
+    background-color: rgb(117, 120, 120);
+    color: black;
+    cursor: pointer;
     text-decoration: underline;
+    transition: 400ms;
+}
+.kits-dots {
+    display: flex; 
+    justify-content: center; 
+    gap: 10px; 
+    margin: 20px 0; 
 }
 
+/* Estilo para cada punto */
+.kits-dots span {
+    display: inline-block; 
+    width: 15px; 
+    height: 15px; 
+    background-color: #3498db; 
+    border-radius: 50%; 
+}
+/* Estilos para el main*/
 main {
     padding: 0;
+    
 }
+.title-section1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
 
-.section1, .section2, .section3, .section4 {
-    margin-bottom: 10px;
-    font-size: 10px;
+}
+.section1{
+    margin-bottom: 20px;
+    font-size: 13px;
     color: #2b2b2b;
-}
-
-.section1 {
-    background-image: url(/img/fondoCRFLINEAS1.jpg);
-    background-color: #f0f5f7;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.section1a {
-    padding: 5px;
-    text-align: left;
-    margin: 8px;
-}
-
-.section1b {
-    padding: 5px;
     text-align: center;
-    margin: 8px;
+    margin: 0 auto;
+    max-width: 80%;
+
+}
+.sectioninicio {
+    background-image: url(/img/fondoCRFLINEAS1.jpg);
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    padding: 50px 20px; 
+    color: #065795; 
 }
 
-.section1a, .section1b, .section1c {
-    color: #065795;
-    font-size: 15px;
+.sectioninicio-texto h1 {
+    color: #3697f8;
+    font-size: 24px; 
+    margin-bottom: 20px; /
 }
 
+.sectioninicio-texto h2 {
+    color: #3697f8;
+    font-size: 18px; 
+    margin-bottom: 20px; 
+}
 h2 {
     color: #3697f8;
 }
@@ -98,57 +125,211 @@ h3, h4, h5 {
 }
 
 p {
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
-.galeria-container {
+.cards-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
-    padding: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5em;
+    justify-content: flex-start;
+    align-items: stretch;
+
+}
+.card {
+    background-color:#004080;
+    color: white;
+    padding: 1em;
+    border: 1px solid grey;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-.galeria-container img {
+.card:hover{
+    background-color: rgb(220, 223, 226);
+    color: black;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px black;
+}
+
+.card-title{
+    font-size: 25px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.card-description{
+    font-size: 18px;
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.title-cards-container, .title-cards-container2 {
+    background-color: #e5e5e5d6;
+    color: #3697f8;
+    padding: 1em .5em;
+    margin: 0;
+    text-align: center;
+}     
+.card:hover img{
+    scale: 1.2;
+}
+
+.card-img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 1s scale; 
+}
+
+
+/* Estilos img-circular de cada profesional*/
+.img-circular {
+    width: 150px; 
+    border-radius: 50%; 
+    border: 2px solid #cccccc; 
+    margin-bottom: 10px;
+    object-fit: cover; 
+    display: block; 
+    margin: 0 auto;
+    height: auto;
+}
+
+/* Estilos para galeria-carrusel*/
+
+.galeria-de-fotos {
+    text-align: center;
+    padding: 20px;
+}
+.galeria-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrusel {
+    display: flex;
+    width: 100%;
+}
+.carrusel img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.card-cobertura {
+    font-size: 16px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #fffdfd;
+    color: #0ea5e6;
+    padding: 8px;
+    border: 1px solid #ddd; /* Añadido border de 1px solid */
+    border-radius: 10px;
+}
+
+.card-cobertura-img {
     width: 100%;
     height: auto;
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
 
-.galeria-container img:hover {
-    transform: scale(1.05);
+.card-cobertura-img:hover {
+    transform: scale(1.2); /* Cambiado scale a transform */
+    object-fit: cover;
+}
+/* Estilos para wsp y mapa*/
+/* Estilos de la sección 2 */
+.section2 {
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: #2b2b2b;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 80%;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 20px; 
 }
 
-.prev, .next {
-    cursor: pointer;
-    padding: 16px;
-    margin-top: -22px;
+/* Estilos del botón de WhatsApp */
+.button {
+    padding: 10px 20px;
+    background-color: #25D366;
     color: white;
-    font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    background-color: rgba(0, 0, 0, 0.8);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    margin: 0 auto; 
 }
 
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 1);
+.button:hover {
+    background-color: #1ebe5e;
 }
+
+/* Estilos del iframe (Mapa) */
+.iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 450px;
+    border: 0;
+    display: block;
+    margin: 0 auto; 
+}
+
+    /* Estilos para footer*/
 
 .footer-general {
     background-color: #004080;
     color: white;
-    padding: 20px;
+    padding: 5px;
     text-align: center;
 }
 
 .footer-text {
     margin: 0 0 10px;
-    font-size: 14px;
+    font-size: 10px;
 }
 
 .footer-social-text {
-    font-size: 16px;
+    font-size: 12px;
     margin-bottom: 10px;
 }
 
@@ -170,34 +351,66 @@ p {
 
 .redeslogo p {
     margin: 0;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .redeslogo img:hover {
     transform: scale(1.2);
 }
 
-.button {
-    padding: 10px 20px;
-    background-color: #25D366;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-    display: inline-block;
-    text-decoration: none;
-}
 
-.button:hover {
-    background-color: #1ebe5e;
-}
+@media(min-width: 992px) {
 
-iframe {
-    width: 100%;
-    max-width: 600px;
-    height: 450px;
-    border: 0;
-    display: block;
-    margin: 0 auto;
+.body-general {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin: 0;
+        padding: 0px;
+        background-color: #e5e5e5d6;
+        text-align: center; 
+        margin: 0 auto; 
+        max-width: 100%;
+        font-size: 18px;
+        
+    }
+.header-general {
+        padding: 20px;
+        text-align: center;
+    }
+    
+.header-titleCRF {
+        margin: 0;
+        font-size: 100px;
+    }
+    
+.header-sub1CRF {
+        margin: 0;
+        font-size: 35px;
+    }
+
+.nav ul {
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items: center;
+    font-size: 18px;}
+
+.nav-link, .Button {
+    font-size: 16px; 
+    padding: 10px 15px;}
+
+.section1a, .section1b, .section1c {
+        font-size: 20px; 
+    }
+.cards-container {
+    grid-template-columns: repeat(6, 1fr);
+}
+.title-cards-container, .title-cards-container2{
+    grid-column: 1/7;
+}
+.footer-text, .footer-social-text {
+        font-size: 12px;
+    }
+.footer-general {
+        padding: 15px;
+    }
 }
