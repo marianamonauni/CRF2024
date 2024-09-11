@@ -98,6 +98,7 @@ main {
 }
 .sectioninicio {
     background-image: url(/img/fondoCRFLINEAS1.jpg);
+    background-color: #ddd;
     background-size: cover; 
     background-repeat: no-repeat;
     background-position: center;
