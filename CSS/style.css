@@ -79,7 +79,8 @@ nav ul li {
 /* Estilos para el main*/
 main {
     padding: 0;
-    
+  
+/* Estilos section1*/
 }
 .title-section1{
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -128,6 +129,7 @@ p {
     line-height: 1.5;
 }
 
+/* Estilos cards*/
 .cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -255,7 +257,7 @@ button:hover {
     background-color: #fffdfd;
     color: #0ea5e6;
     padding: 8px;
-    border: 1px solid #ddd; /* Añadido border de 1px solid */
+    border: 1px solid #ddd; 
     border-radius: 10px;
 }
 
@@ -267,7 +269,7 @@ button:hover {
 }
 
 .card-cobertura-img:hover {
-    transform: scale(1.2); /* Cambiado scale a transform */
+    transform: scale(1.2); 
     object-fit: cover;
 }
 /* Estilos para wsp y mapa*/
@@ -358,7 +360,7 @@ button:hover {
     transform: scale(1.2);
 }
 
-
+/* Estilos para pc*/
 @media(min-width: 992px) {
 
 .body-general {
